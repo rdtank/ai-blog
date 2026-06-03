@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Environment files
+.env
+.env.*
+frontend/.env
+frontend/.env.*
+backend/.env
+backend/.env.*
+!.env.example
+!frontend/.env.example
+!backend/.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+build/
+coverage/
+.nyc_output/
+frontend/dist/
+frontend/build/
+frontend/coverage/
+backend/dist/
+backend/build/
+backend/coverage/
+
+# Package manager caches
+.npm/
+.pnpm-store/
+
+
+# TypeScript
+*.tsbuildinfo
+
+# OS and editor files
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
