@@ -1,7 +1,7 @@
 import {
-    GoogleGenerativeAI,
-    HarmBlockThreshold,
-    HarmCategory,
+  GoogleGenerativeAI,
+  HarmBlockThreshold,
+  HarmCategory,
 } from "@google/generative-ai";
 import { Request, Response, Router } from "express";
 import { posts } from "../data/post";
