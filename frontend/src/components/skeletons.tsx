@@ -1,0 +1,48 @@
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Skeleton } from "@/components/ui/skeleton";
+
+export function PostCardSkeleton() {
+  return (
+    <Card className="h-full">
+      <CardHeader className="gap-2">
+        <Skeleton className="h-5 w-3/4" />
+        <Skeleton className="h-4 w-1/2" />
+      </CardHeader>
+      <CardContent className="space-y-2">
+        <Skeleton className="h-4 w-full" />
+        <Skeleton className="h-4 w-full" />
+        <Skeleton className="h-4 w-2/3" />
+        <Skeleton className="mt-3 h-5 w-20 rounded-full" />
+      </CardContent>
+    </Card>
+  );
+}
+
+export function PostListSkeleton({ count = 6 }: { count?: number }) {
+  return (
+    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {Array.from({ length: count }).map((_, i) => (
+        <PostCardSkeleton key={i} />
+      ))}
+    </div>
+  );
+}
+
+export function PostDetailSkeleton() {
+  return (
+    <div className="space-y-6">
+      <Skeleton className="h-8 w-4/5" />
+      <div className="flex gap-3">
+        <Skeleton className="h-5 w-24" />
+        <Skeleton className="h-5 w-24" />
+        <Skeleton className="h-5 w-20" />
+      </div>
+      <Skeleton className="h-9 w-48" />
+      <div className="space-y-3 pt-2">
+        {Array.from({ length: 8 }).map((_, i) => (
+          <Skeleton key={i} className="h-4 w-full" />
+        ))}
+      </div>
+    </div>
+  );
+}
