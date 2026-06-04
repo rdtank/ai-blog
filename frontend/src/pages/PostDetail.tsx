@@ -4,8 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { apiUrl } from "@/lib/api";
 import { usePost, useStreamingAI } from "@/hooks";
+import { apiUrl } from "@/lib/api";
 import { formatDate } from "@/lib/utils";
 import { ArrowLeft, Sparkles } from "lucide-react";
 import { useState, type FormEvent } from "react";
@@ -14,8 +14,8 @@ import { Link, useParams } from "react-router";
 export function PostDetail() {
   const { id = "" } = useParams();
   const { data: post, isPending, isError, error, refetch } = usePost(id);
-  const summary = useStreamingAI(apiUrl("/api/ai/summarize"));
-  const ask = useStreamingAI(apiUrl("/api/ai/ask"));
+  const summary = useStreamingAI(apiUrl("api/ai/summarize"));
+  const ask = useStreamingAI(apiUrl("api/ai/ask"));
   const [question, setQuestion] = useState("");
 
   if (isPending) return <PostDetailSkeleton />;
